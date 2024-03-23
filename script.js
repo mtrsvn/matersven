@@ -14,7 +14,6 @@ prev.onclick = function(){
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 }
-let refreshInterval = setInterval(()=> {next.click()}, 3000);
 
 function scrollToPortfolio() {
     const portfolioSection = document.getElementById('portfolio');
@@ -32,9 +31,7 @@ function reloadSlider(){
     let last_active_dot = document.querySelector('.slider .dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
-
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);   
+  
 }
 
 dots.forEach((li, key) => {
