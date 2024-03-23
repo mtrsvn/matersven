@@ -15,17 +15,26 @@ prev.onclick = function(){
     reloadSlider();
 }
 let refreshInterval = setInterval(()=> {next.click()}, 3000);
+
+function scrollToPortfolio() {
+    const portfolioSection = document.getElementById('portfolio');
+    window.scrollTo({
+        top: portfolioSection.offsetTop,
+        behavior: 'smooth'
+    });
+}
+
 function reloadSlider(){
     slider.style.left = -items[active].offsetLeft + 'px';
-    // 
+
+    scrollToPortfolio();
+
     let last_active_dot = document.querySelector('.slider .dots li.active');
     last_active_dot.classList.remove('active');
     dots[active].classList.add('active');
 
     clearInterval(refreshInterval);
-    refreshInterval = setInterval(()=> {next.click()}, 3000);
-
-    
+    refreshInterval = setInterval(()=> {next.click()}, 3000);   
 }
 
 dots.forEach((li, key) => {
