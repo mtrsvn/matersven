@@ -59,6 +59,10 @@ li.nav-link {
     width: 100%;
 }
 
+.contact-link {
+    color: #8BC6EC;
+  }  
+
 .main {
     margin-top: 10vh;
     display: inline-block;
