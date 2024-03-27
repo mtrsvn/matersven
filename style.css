@@ -236,6 +236,6 @@ li.nav-link {
 
 
 .flex-container .container .glass-container img {
-    max-width: 260px; 
-    height: 256px; 
+    max-width: 255px; 
+    height: 255px; 
 }
