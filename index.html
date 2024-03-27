@@ -1,125 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>matersven - home</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="img/image.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="script.js"></script>
-</head>
-<body>
+* {
+    font-family: "Montserrat", sans-serif;
+}
 
-    <div class="container">
-        <div class="glass-container">
-            <nav class="navbar">   
-            <div class="logo"><a href="https://www.youtube.com/c/matersven" target="_blank">matersven</a>
-            </div>
-            <ul class="nav-link">
-                <li class="nav-link"><a href="#">About</a></li>
-                <li class="nav-link"><a href="https://linktr.ee/matersven" target="_blank">Links</a></li>
-                <li class="nav-link"><a href="#" onclick="scrollToPortfolio()">Portfolio</a></li>
-            </ul>
-            </nav>
-            <div class="content">
-                <div class="main">
-                    <h2>Hello! 👋,<br>I'm matersven</h2>
-                    <p>
-                        I am matersven, I am 19 years old. Currenty in my first year
-                        of college pursuing Bachelor of Science in Information Technology
-                        (BSIT). 
-                        <br>
-                        <br>
-                        Beyond academics, my creative finds expression in crafting Minecraft GFX (Minecraft Graphics). 
-                        This unique art form, inspired by Minecraft, helps creators visually connect with audiences on their 
-                        channels or brands in a fresh and exciting way. You can contact me <a class="contact-link" 
-                        href="https://twitter.com/matersven" target="_blank">here</a> for more info.
-                    </p>
-                    
-                </div>
-                <div class="image-wrapper">
-                    <img src="img/image.png">
-                    </div>
-                </div>
-            </div>
-        </div>       
-        
-        <div class="container" id="portfolio">
-            <div class="glass-container">
-                <h2>Minecraft Thumbnail</h2>
-                <p>Minecraft Thumbnail for your Youtube channel</p>
-                    <p>
-                        Enhance your channel's appeal using high quality Minecraft Thumbnails 
-                        that are attention grabbing and promising to elevate viewer engagement 
-                        and attract more views, these thumbnails promise to get your audience's 
-                        attention.
-                    </p>
-                    <br>
-                <div class="slider">
-                    <div class="list">
-                        <div class="item">
-                            <img src="img/ex1.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex2.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex3.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex4.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex5.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex6.png" alt="">
-                        </div>
-                        <div class="item">
-                            <img src="img/ex7.png" alt="">
-                        </div>
-                    </div>
-                    <div class="buttons">
-                        <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-                        <button id="next"><i class="fa-solid fa-angle-right"></i></button>
-                    </div>
-                    <ul class="dots">
-                        <li class="active"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                     </div>
-                  </div>
-        </div> 
-    </div>
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
-      <div class="flex-container">
-        <div class="container">
-            <div class="glass-container">
-                <img src="img/exp.png" alt="">
-            </div>
-        </div>
-    
-        <div class="container">
-            <div class="glass-container">
-                <img src="img/cl.png" alt="">
-            </div>
-        </div>
-    
-        <div class="container">
-            <div class="glass-container">
-                <img src="img/des.png" alt="">
-            </div>
-        </div>
-    </div>
-        
-</body>
-</html>
+body {
+    color: #fff;
+    background-color: #8BC6EC;
+    background-image: 
+    linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.glass-container {
+    display: block;
+    max-width: 54vw; /* Adjusted from 72vw */
+    margin-top: 7.5vh; /* Adjusted from 10vh */
+    margin-bottom: 22.5px; /* Adjusted from 30px */
+    background-color: rgba(0, 0, 0, 0.56);
+    padding: 37.5px; /* Adjusted from 50px */
+    border-radius: 12px; /* Adjusted from 16px */
+    box-shadow: 0 0 7.5px rgba(0, 0, 0, 0.56); /* Adjusted from 10px */
+    backdrop-filter: blur(8.7px); /* Adjusted from 11.6px */
+    -webkit-backdrop-filter: blur(8.7px); /* Adjusted from 11.6px */
+}
+
+ul.nav-link {
+    margin: 0;
+    float: right;
+    display: flex;
+    list-style: none; 
+}
+
+li.nav-link {
+    display: inline-block;
+    margin-left: 22.5px; /* Adjusted from 30px */
+    font-size: 12.75px; /* Adjusted from 17px */
+    font-weight: 300;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 22.5px; /* Adjusted from 30px */
+    font-weight: 600;
+    margin-top: -7.5px; /* Adjusted from -10px */
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.main {
+    margin-top: 7.5vh; /* Adjusted from 10vh */
+    display: inline-block;
+    padding: 15px; /* Adjusted from 20px */
+}
+
+.contact-link {
+    color: #8BC6EC;
+  }  
+
+.main h2{
+    font-size: 26.25px; /* Adjusted from 35px */
+}
+
+.main p{
+    font-size: 12px; /* Adjusted from 16px */
+    line-height: 17.25px; /* Adjusted from 23px */
+}
+
+.image-wrapper{
+    display: flex;
+    margin-top: 3.75vh; /* Adjusted from 5vh */
+    position: relative;
+}
+
+.image-wrapper img{
+    max-width: 375px; /* Adjusted from 500px */
+}
+
+@media screen and (max-width: 1075px) {
+    .content{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .logo{
+        font-size: 16.5px; /* Adjusted from 22px */
+    }
+    li.nav-link{
+        font-size: 9.75px; /* Adjusted from 13px */
+    }
+    .main h2{
+        font-size: 15px; /* Adjusted from 20px */
+    }
+    .main p{
+        font-size: 11.25px; /* Adjusted from 15px */
+    }
+    button{
+        font-size: 9.75px; /* Adjusted from 13px */
+    }
+    .image-wrapper img{
+        max-width: 300px; /* Adjusted from 400px */
+    }
+}
+
+.navbar .nav-link a {
+    position: relative; 
+}
+
+.navbar .nav-link a::before {
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link a:hover::before {
+    width: 100%;
+}
+
+.slider {
+    width: 975px; /* Adjusted from 1300px */
+    max-width: 100vw;
+    border-radius: 9px; /* Adjusted from 12px */
+    height: 525px; /* Adjusted from 700px */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider .list {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list img {
+    width: 975px; /* Adjusted from 1300px */
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: none; 
+    justify-content: space-between;
+}
+
+.slider:hover .buttons {
+    display: flex; 
+}
+
+.slider .buttons button {
+    width: 37.5px; /* Adjusted from 50px */
+    height: 37.5px; /* Adjusted from 50px */
+    border-radius: 50%;
+    background-color: #1D1C1A;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 50%;
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 7.5px; /* Adjusted from 10px */
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 7.5px; /* Adjusted from 10px */
+    height: 7.5px; /* Adjusted from 10px */
+    background-color: #fff;
+    margin: 7.5px; /* Adjusted from 10px */
+    border-radius: 15px; /* Adjusted from 20px */
+    transition: 0.5s;
+}
+
+.slider .dots li.active {
+    width: 22.5px; /* Adjusted from 30px */
+}
+
+@media screen and (max-width: 768px) {
+    .slider {
+        height: 300px; /* Adjusted from 400px */
+    }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.flex-container .container {
+    margin: 0 26px;
+}
+
+
+.flex-container .container .glass-container img {
+    max-width: 260px; 
+    height: 256px; 
+}
