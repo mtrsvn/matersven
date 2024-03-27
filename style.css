@@ -221,3 +221,24 @@ li.nav-link {
         height: 400px;
     }
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.flex-container .container {
+    margin: 0 26px;
+}
+
+.flex-container .container .glass-container img {
+    max-width: 350px; 
+    height: 350px; 
+}
