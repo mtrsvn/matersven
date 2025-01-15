@@ -217,25 +217,3 @@ li.nav-link {
         height: 300px; 
     }
 }
-
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-}
-
-.flex-container .container {
-    margin: 0 26px;
-}
-
-
-.flex-container .container .glass-container img {
-    max-width: 255px; 
-    height: 255px; 
-}
