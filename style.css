@@ -117,15 +117,13 @@ li.nav-link {
     }
 }
 
-
-
 .image-wrapper img {
     max-width: 375px;
-    transition: transform 0.5s ease-in-out; /* Add smooth transition */
+    transition: transform 0.1s ease-in-out; /* Add smooth transition */
 }
 
 .image-wrapper img:active {
-    transform: scale(0.20); /* Make the image shrink when clicked */
+    transform: scale(0.85); /* Make the image shrink when clicked */
 }
 
 
