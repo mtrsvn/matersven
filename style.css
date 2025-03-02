@@ -12,6 +12,17 @@ body {
     background-color: #8BC6EC;
     background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     min-height: 100vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .container {
