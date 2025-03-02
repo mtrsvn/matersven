@@ -10,8 +10,7 @@ a {
 body {
     color: #fff;
     background-color: #8BC6EC;
-    background-image: 
-    linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
     min-height: 100vh;
 }
 
@@ -22,36 +21,36 @@ body {
 
 .glass-container {
     display: block;
-    max-width: 54vw; 
-    margin-top: 7.5vh; 
+    max-width: 54vw;
+    margin-top: 7.5vh;
     margin-bottom: 22.5px;
     background-color: rgba(0, 0, 0, 0.56);
-    padding: 37.5px; 
-    border-radius: 12px; 
-    box-shadow: 0 0 7.5px rgba(0, 0, 0, 0.56); 
-    backdrop-filter: blur(8.7px); 
-    -webkit-backdrop-filter: blur(8.7px); 
+    padding: 37.5px;
+    border-radius: 12px;
+    box-shadow: 0 0 7.5px rgba(0, 0, 0, 0.56);
+    backdrop-filter: blur(8.7px);
+    -webkit-backdrop-filter: blur(8.7px);
 }
 
 ul.nav-link {
     margin: 0;
     float: right;
     display: flex;
-    list-style: none; 
+    list-style: none;
 }
 
 li.nav-link {
     display: inline-block;
-    margin-left: 22.5px; 
-    font-size: 12.75px; 
+    margin-left: 22.5px;
+    font-size: 12.75px;
     font-weight: 300;
 }
 
 .logo {
     display: inline-block;
-    font-size: 22.5px; 
+    font-size: 22.5px;
     font-weight: 600;
-    margin-top: -7.5px; 
+    margin-top: -7.5px;
 }
 
 .content {
@@ -60,72 +59,70 @@ li.nav-link {
 }
 
 .main {
-    margin-top: 7.5vh; 
+    margin-top: 7.5vh;
     display: inline-block;
-    padding: 15px; 
+    padding: 15px;
 }
 
 .contact-link {
     color: #8BC6EC;
-  }  
+}
 
-.main h2{
+.main h2 {
     font-size: 26.25px;
 }
 
-.main p{
-    font-size: 12px; 
-    line-height: 17.25px; 
+.main p {
+    font-size: 12px;
+    line-height: 17.25px;
 }
 
-.image-wrapper{
+.image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3.75vh; 
+    margin-top: 3.75vh;
     position: relative;
 }
 
-.image-wrapper img{
-    max-width: 375px; 
+.image-wrapper img {
+    max-width: 375px;
 }
 
-
-
 @media screen and (max-width: 1075px) {
-    .content{
+    .content {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width: 720px) {
-    .logo{
-        font-size: 16.5px; 
+    .logo {
+        font-size: 16.5px;
     }
-    li.nav-link{
-        font-size: 9.75px; 
-    }
-    .main h2{
-        font-size: 15px; 
-    }
-    .main p{
-        font-size: 11.25px; 
-    }
-    button{
+    li.nav-link {
         font-size: 9.75px;
     }
-    .image-wrapper img{
+    .main h2 {
+        font-size: 15px;
+    }
+    .main p {
+        font-size: 11.25px;
+    }
+    button {
+        font-size: 9.75px;
+    }
+    .image-wrapper img {
         max-width: 300px;
     }
 }
 
 .image-wrapper img {
     max-width: 375px;
-    transition: transform 0.1s ease-in-out; /* Add smooth transition */
+    transition: transform 0.1s ease-in-out;
 }
 
 .image-wrapper img:active {
-    transform: scale(0.85); 
+    transform: scale(0.85);
 }
 
 .navbar {
@@ -133,18 +130,17 @@ li.nav-link {
     justify-content: space-between;
     align-items: center;
     min-width: 0;
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .logo {
         display: none;
     }
 }
 
-
 .navbar .nav-link a {
-    position: relative; 
+    position: relative;
 }
 
 .navbar .nav-link a::before {
@@ -163,10 +159,10 @@ li.nav-link {
 }
 
 .slider {
-    width: 975px; 
+    width: 975px;
     max-width: 100vw;
-    border-radius: 9px; 
-    height: 525px; 
+    border-radius: 9px;
+    height: 525px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -183,8 +179,7 @@ li.nav-link {
 }
 
 .slider .list img {
-    
-    width: 975px; 
+    width: 975px;
     max-width: 100vw;
     height: 100%;
     object-fit: cover;
@@ -195,17 +190,17 @@ li.nav-link {
     top: 45%;
     left: 5%;
     width: 90%;
-    display: none; 
+    display: none;
     justify-content: space-between;
 }
 
 .slider:hover .buttons {
-    display: flex; 
+    display: flex;
 }
 
 .slider .buttons button {
-    width: 37.5px; 
-    height: 37.5px; 
+    width: 37.5px;
+    height: 37.5px;
     border-radius: 50%;
     background-color: #1D1C1A;
     color: #fff;
@@ -229,29 +224,29 @@ li.nav-link {
 
 .slider .dots li {
     list-style: none;
-    width: 7.5px; 
+    width: 7.5px;
     height: 7.5px;
     background-color: #fff;
-    margin: 7.5px; 
-    border-radius: 15px; 
+    margin: 7.5px;
+    border-radius: 15px;
     transition: 0.5s;
 }
 
 .slider .dots li.active {
-    width: 22.5px; 
+    width: 22.5px;
 }
 
 @media screen and (max-width: 768px) {
     .slider {
-        height: 300px; 
+        height: 300px;
     }
 }
 
 .slider2 {
-    width: 975px; 
+    width: 975px;
     max-width: 100vw;
-    border-radius: 9px; 
-    height: 525px; 
+    border-radius: 9px;
+    height: 525px;
     margin: auto;
     position: relative;
     overflow: hidden;
@@ -268,7 +263,7 @@ li.nav-link {
 }
 
 .slider2 .list2 img {
-    width: 975px; 
+    width: 975px;
     max-width: 100vw;
     height: 100%;
     object-fit: cover;
@@ -279,17 +274,17 @@ li.nav-link {
     top: 45%;
     left: 5%;
     width: 90%;
-    display: none; 
+    display: none;
     justify-content: space-between;
 }
 
 .slider2:hover .buttons {
-    display: flex; 
+    display: flex;
 }
 
 .slider2 .buttons button {
-    width: 37.5px; 
-    height: 37.5px; 
+    width: 37.5px;
+    height: 37.5px;
     border-radius: 50%;
     background-color: #1D1C1A;
     color: #fff;
@@ -313,28 +308,29 @@ li.nav-link {
 
 .slider2 .dots2 li {
     list-style: none;
-    width: 7.5px; 
+    width: 7.5px;
     height: 7.5px;
     background-color: #fff;
-    margin: 7.5px; 
-    border-radius: 15px; 
+    margin: 7.5px;
+    border-radius: 15px;
     transition: 0.5s;
 }
 
 .slider2 .dots2 li.active {
-    width: 22.5px; 
+    width: 22.5px;
 }
 
 @media screen and (max-width: 768px) {
     .slider2 {
-        height: 300px; 
+        height: 300px;
     }
 }
+
 .tools-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px; /* Adjust gap between images */
+    gap: 40px;
     margin-top: 50px;
     text-align: center;
 }
@@ -342,7 +338,7 @@ li.nav-link {
 .tools-heading {
     font-size: 1.5em;
     margin-bottom: 20px;
-    text-align: center; /* Ensure heading is centered */
+    text-align: center;
     width: 100%;
 }
 
@@ -356,35 +352,35 @@ li.nav-link {
 }
 
 .tool img {
-    width: 120px; /* Adjust the logo size */
+    width: 120px;
     height: auto;
     transition: transform 0.3s ease;
 }
 
 .tool:hover {
-    transform: scale(1.05); /* Subtle zoom effect on hover */
+    transform: scale(1.05);
 }
 
 .tool-info {
     position: absolute;
-    bottom: 100%; /* Position above the image */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Lower opacity */
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 20px; /* Padding inside the box */
-    margin-bottom: 10px; /* Margin below the box */
+    padding: 20px;
+    margin-bottom: 10px;
     text-align: left;
     visibility: hidden;
     opacity: 0;
-    width: 100%;
+    width: 250px;
     box-sizing: border-box;
     transition: all 0.4s ease;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
 }
 
 .tool:hover .tool-info {
-    bottom: 120%; /* Move the box slightly above for better spacing */
+    bottom: 120%;
     visibility: visible;
     opacity: 1;
 }
@@ -393,10 +389,10 @@ li.nav-link {
 .tool p {
     margin: 0;
     padding: 5px 0;
-    display: none; /* Initially hide h3 and p */
+    display: none;
 }
 
 .tool:hover h3,
 .tool:hover p {
-    display: block; /* Show h3 and p on hover */
+    display: block;
 }

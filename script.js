@@ -1,4 +1,3 @@
-// First Slider (slider2)
 let slider2 = document.querySelector('.slider2 .list2');
 let items2 = document.querySelectorAll('.slider2 .list2 .item2');
 let next2 = document.getElementById('next2');
@@ -19,8 +18,6 @@ prev2.onclick = function() {
 
 function reloadSlider2() {
     slider2.style.left = -items2[active2].offsetLeft + 'px';
-
-    // Update active dot for slider2
     let lastActiveDot2 = document.querySelector('.slider2 .dots2 li.active');
     if (lastActiveDot2) {
         lastActiveDot2.classList.remove('active');
@@ -28,7 +25,6 @@ function reloadSlider2() {
     dots2[active2].classList.add('active');
 }
 
-// Dots navigation for slider2
 dots2.forEach((li, key) => {
     li.addEventListener('click', () => {
         active2 = key;
@@ -36,23 +32,20 @@ dots2.forEach((li, key) => {
     });
 });
 
-// Second Slider (slider)
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let dots = document.querySelectorAll('.slider .dots li');
-let image = document.querySelector('.image-wrapper img'); // Select the image
-let h2Text = document.querySelector('.main h2'); // Select the h2 element
-let logoText = document.querySelector('.logo a'); // Select the logo text
-let body = document.body; // Select the body element
+let image = document.querySelector('.image-wrapper img');
+let h2Text = document.querySelector('.main h2');
+let logoText = document.querySelector('.logo a');
+let body = document.body;
 let lengthItems = items.length - 1;
 let active = 0;
 
-// Add CSS for fade effect
-body.style.transition = "background-image 0.5s ease"; // Fade transition for background image
+body.style.transition = "background-image 0.5s ease";
 
-// Image click toggle function
 image.onclick = function() {
     image.classList.add('click-animation');
 
@@ -94,8 +87,6 @@ function scrollToPortfolio() {
 function reloadSlider() {
     slider.style.left = -items[active].offsetLeft + 'px';
     scrollToPortfolio();
-
-    // Update active dot for slider
     let lastActiveDot = document.querySelector('.slider .dots li.active');
     if (lastActiveDot) {
         lastActiveDot.classList.remove('active');
@@ -110,7 +101,6 @@ dots.forEach((li, key) => {
     });
 });
 
-// Recalculate position on window resize for both sliders
 window.onresize = function() {
     reloadSlider();
     reloadSlider2();
