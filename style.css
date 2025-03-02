@@ -80,6 +80,8 @@ li.nav-link {
 
 .image-wrapper{
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3.75vh; 
     position: relative;
 }
@@ -123,7 +125,21 @@ li.nav-link {
 }
 
 .image-wrapper img:active {
-    transform: scale(0.85); /* Make the image shrink when clicked */
+    transform: scale(0.85); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 0;
+    flex-wrap: wrap
+}
+
+@media (max-width: 768px) { 
+    .logo {
+        display: none;
+    }
 }
 
 
@@ -167,6 +183,7 @@ li.nav-link {
 }
 
 .slider .list img {
+    
     width: 975px; 
     max-width: 100vw;
     height: 100%;
@@ -230,3 +247,156 @@ li.nav-link {
     }
 }
 
+.slider2 {
+    width: 975px; 
+    max-width: 100vw;
+    border-radius: 9px; 
+    height: 525px; 
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider2 .list2 {
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s ease;
+}
+
+.slider2 .list2 img {
+    width: 975px; 
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider2 .buttons {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: none; 
+    justify-content: space-between;
+}
+
+.slider2:hover .buttons {
+    display: flex; 
+}
+
+.slider2 .buttons button {
+    width: 37.5px; 
+    height: 37.5px; 
+    border-radius: 50%;
+    background-color: #1D1C1A;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    opacity: 50%;
+}
+
+.slider2 .dots2 {
+    position: absolute;
+    bottom: 7.5px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider2 .dots2 li {
+    list-style: none;
+    width: 7.5px; 
+    height: 7.5px;
+    background-color: #fff;
+    margin: 7.5px; 
+    border-radius: 15px; 
+    transition: 0.5s;
+}
+
+.slider2 .dots2 li.active {
+    width: 22.5px; 
+}
+
+@media screen and (max-width: 768px) {
+    .slider2 {
+        height: 300px; 
+    }
+}
+.tools-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Adjust gap between images */
+    margin-top: 50px;
+    text-align: center;
+}
+
+.tools-heading {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center; /* Ensure heading is centered */
+    width: 100%;
+}
+
+.tool {
+    position: relative;
+    display: inline-block;
+    max-width: 180px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool img {
+    width: 120px; /* Adjust the logo size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.tool:hover {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.tool-info {
+    position: absolute;
+    bottom: 100%; /* Position above the image */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Lower opacity */
+    color: white;
+    padding: 20px; /* Padding inside the box */
+    margin-bottom: 10px; /* Margin below the box */
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.tool:hover .tool-info {
+    bottom: 120%; /* Move the box slightly above for better spacing */
+    visibility: visible;
+    opacity: 1;
+}
+
+.tool h3,
+.tool p {
+    margin: 0;
+    padding: 5px 0;
+    display: none; /* Initially hide h3 and p */
+}
+
+.tool:hover h3,
+.tool:hover p {
+    display: block; /* Show h3 and p on hover */
+}

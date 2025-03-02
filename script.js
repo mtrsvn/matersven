@@ -1,3 +1,42 @@
+// First Slider (slider2)
+let slider2 = document.querySelector('.slider2 .list2');
+let items2 = document.querySelectorAll('.slider2 .list2 .item2');
+let next2 = document.getElementById('next2');
+let prev2 = document.getElementById('prev2');
+let dots2 = document.querySelectorAll('.slider2 .dots2 li');
+let lengthItems2 = items2.length - 1;
+let active2 = 0;
+
+next2.onclick = function() {
+    active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
+    reloadSlider2();
+};
+
+prev2.onclick = function() {
+    active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+    reloadSlider2();
+};
+
+function reloadSlider2() {
+    slider2.style.left = -items2[active2].offsetLeft + 'px';
+
+    // Update active dot for slider2
+    let lastActiveDot2 = document.querySelector('.slider2 .dots2 li.active');
+    if (lastActiveDot2) {
+        lastActiveDot2.classList.remove('active');
+    }
+    dots2[active2].classList.add('active');
+}
+
+// Dots navigation for slider2
+dots2.forEach((li, key) => {
+    li.addEventListener('click', () => {
+        active2 = key;
+        reloadSlider2();
+    });
+});
+
+// Second Slider (slider)
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -7,7 +46,6 @@ let image = document.querySelector('.image-wrapper img'); // Select the image
 let h2Text = document.querySelector('.main h2'); // Select the h2 element
 let logoText = document.querySelector('.logo a'); // Select the logo text
 let body = document.body; // Select the body element
-
 let lengthItems = items.length - 1;
 let active = 0;
 
@@ -16,38 +54,31 @@ body.style.transition = "background-image 0.5s ease"; // Fade transition for bac
 
 // Image click toggle function
 image.onclick = function() {
-    // Add animation class
     image.classList.add('click-animation');
-    
-    // Toggle between the images and change background gradient
+
     if (image.src.includes('image.png')) {
-        image.src = 'img/alternatemater.png'; // Switch to the alternate image
-        // Update text for h2 and logo
+        image.src = 'img/alternatemater.png';
         h2Text.innerHTML = "Hello! 👋,<br>I'm mtrsvn";
         logoText.innerHTML = "mtrsvn";
-        // Change the background gradient
         body.style.backgroundImage = "linear-gradient(135deg, #AB75D8 0%, #b78cdb 100%)";
     } else {
-        image.src = 'img/image.png'; // Switch back to the original image
-        // Reset text for h2 and logo
+        image.src = 'img/image.png';
         h2Text.innerHTML = "Hello! 👋,<br>I'm matersven";
         logoText.innerHTML = "matersven";
-        // Revert the background gradient
         body.style.backgroundImage = "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)";
     }
 
-    // Remove the animation class after the animation is done (0.5s duration)
     setTimeout(() => {
         image.classList.remove('click-animation');
     }, 500);
 };
 
-next.onclick = function(){
+next.onclick = function() {
     active = active + 1 <= lengthItems ? active + 1 : 0;
     reloadSlider();
 };
 
-prev.onclick = function(){
+prev.onclick = function() {
     active = active - 1 >= 0 ? active - 1 : lengthItems;
     reloadSlider();
 };
@@ -60,23 +91,27 @@ function scrollToPortfolio() {
     });
 }
 
-function reloadSlider(){
+function reloadSlider() {
     slider.style.left = -items[active].offsetLeft + 'px';
-
     scrollToPortfolio();
 
-    let last_active_dot = document.querySelector('.slider .dots li.active');
-    last_active_dot.classList.remove('active');
+    // Update active dot for slider
+    let lastActiveDot = document.querySelector('.slider .dots li.active');
+    if (lastActiveDot) {
+        lastActiveDot.classList.remove('active');
+    }
     dots[active].classList.add('active');
 }
 
 dots.forEach((li, key) => {
-    li.addEventListener('click', ()=> {
-         active = key;
-         reloadSlider();
+    li.addEventListener('click', () => {
+        active = key;
+        reloadSlider();
     });
 });
 
-window.onresize = function(event) {
+// Recalculate position on window resize for both sliders
+window.onresize = function() {
     reloadSlider();
+    reloadSlider2();
 };
