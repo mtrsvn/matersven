@@ -435,7 +435,7 @@ li.nav-link {
     top: 5px;
     right: 5px;
     cursor: pointer;
-    color: #fff;
+    color: #d4d4d4;
 }
 
 .floating-caption p {
@@ -446,11 +446,12 @@ li.nav-link {
 }
 
 .floating-caption button {
+    font-weight: bold;
     margin-right: 8px;
     border: none;
     border-radius: 999px; 
-    padding: 10px 24px; /* Increased padding for a wider button */
-    min-width: 120px; /* Ensures the button has a minimum width */
+    padding: 10px 24px; 
+    min-width: 120px; 
     background-color: #fff;
     color: #1c1d1e;
     cursor: pointer;
