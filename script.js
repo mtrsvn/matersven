@@ -49,16 +49,22 @@ body.style.transition = "background-image 0.5s ease";
 image.onclick = function() {
     image.classList.add('click-animation');
 
+    let pText = document.querySelector("p");
+
     if (image.src.includes('image.png')) {
         image.src = 'img/alternatemater.png';
         h2Text.innerHTML = "Hello! 👋,<br>I'm mtrsvn";
         logoText.innerHTML = "mtrsvn";
         body.style.backgroundImage = "linear-gradient(135deg, #AB75D8 0%, #b78cdb 100%)";
+  
+        pText.innerHTML = pText.innerHTML.replace(/matersven/g, "mtrsvn");
     } else {
         image.src = 'img/image.png';
         h2Text.innerHTML = "Hello! 👋,<br>I'm matersven";
         logoText.innerHTML = "matersven";
         body.style.backgroundImage = "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)";
+ 
+        pText.innerHTML = pText.innerHTML.replace(/mtrsvn/g, "matersven");
     }
 
     setTimeout(() => {
@@ -66,10 +72,6 @@ image.onclick = function() {
     }, 500);
 };
 
-next.onclick = function() {
-    active = active + 1 <= lengthItems ? active + 1 : 0;
-    reloadSlider();
-};
 
 prev.onclick = function() {
     active = active - 1 >= 0 ? active - 1 : lengthItems;
