@@ -425,7 +425,7 @@ li.nav-link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5px; 
+    gap: 20px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 15px; 
 }
@@ -440,6 +440,7 @@ li.nav-link {
 
 .floating-caption p {
     flex: 1;
+    margin-left: 8px;
     text-align: left;
     white-space: normal;
 }
@@ -448,12 +449,14 @@ li.nav-link {
     margin-right: 8px;
     border: none;
     border-radius: 999px; 
-    padding: 6px 12px;
+    padding: 10px 24px; /* Increased padding for a wider button */
+    min-width: 120px; /* Ensures the button has a minimum width */
     background-color: #fff;
     color: #1c1d1e;
     cursor: pointer;
     flex-shrink: 0;
     white-space: nowrap;
+    text-align: center;
 }
 
 @keyframes jumpToBottom {
