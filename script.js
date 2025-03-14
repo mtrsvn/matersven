@@ -6,23 +6,26 @@ let dots2 = document.querySelectorAll('.slider2 .dots2 li');
 let lengthItems2 = items2.length - 1;
 let active2 = 0;
 
-next2.onclick = function() {
-    active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
-    reloadSlider2();
-};
+if (next2) {
+    next2.addEventListener('click', () => {
+        active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
+        reloadSlider2();
+    });
+}
 
-prev2.onclick = function() {
-    active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
-    reloadSlider2();
-};
+if (prev2) {
+    prev2.addEventListener('click', () => {
+        active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
+        reloadSlider2();
+    });
+}
 
 function reloadSlider2() {
-    slider2.style.left = -items2[active2].offsetLeft + 'px';
-    let lastActiveDot2 = document.querySelector('.slider2 .dots2 li.active');
-    if (lastActiveDot2) {
-        lastActiveDot2.classList.remove('active');
-    }
-    dots2[active2].classList.add('active');
+    if (!slider2 || !items2[active2]) return;
+    slider2.style.transform = `translateX(-${items2[active2].offsetLeft}px)`;
+    
+    document.querySelector('.slider2 .dots2 li.active')?.classList.remove('active');
+    dots2[active2]?.classList.add('active');
 }
 
 dots2.forEach((li, key) => {
@@ -32,6 +35,7 @@ dots2.forEach((li, key) => {
     });
 });
 
+// Main Slider
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');
@@ -46,54 +50,58 @@ let active = 0;
 
 body.style.transition = "background-image 0.5s ease";
 
-image.onclick = function() {
-    image.classList.add('click-animation');
-
-    let pText = document.querySelector("p");
-
-    if (image.src.includes('image.png')) {
-        image.src = 'img/alternatemater.png';
-        h2Text.innerHTML = "Hello! 👋,<br>I'm mtrsvn";
-        logoText.innerHTML = "mtrsvn";
-        body.style.backgroundImage = "linear-gradient(135deg, #AB75D8 0%, #b78cdb 100%)";
-  
-        pText.innerHTML = pText.innerHTML.replace(/matersven/g, "mtrsvn");
-    } else {
-        image.src = 'img/image.png';
-        h2Text.innerHTML = "Hello! 👋,<br>I'm matersven";
-        logoText.innerHTML = "matersven";
-        body.style.backgroundImage = "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)";
- 
-        pText.innerHTML = pText.innerHTML.replace(/mtrsvn/g, "matersven");
-    }
-
-    setTimeout(() => {
-        image.classList.remove('click-animation');
-    }, 500);
-};
-
-
-prev.onclick = function() {
-    active = active - 1 >= 0 ? active - 1 : lengthItems;
-    reloadSlider();
-};
-
-function scrollToPortfolio() {
-    const portfolioSection = document.getElementById('portfolio');
-    window.scrollTo({
-        top: portfolioSection.offsetTop,
-        behavior: 'smooth'
+if (image) {
+    image.addEventListener('click', () => {
+        image.classList.add('click-animation');
+        let pText = document.querySelector("p");
+        
+        if (image.src.includes('image.png')) {
+            image.src = 'img/alternatemater.png';
+            h2Text.innerHTML = "Hello! 👋,<br>I'm mtrsvn";
+            logoText.innerHTML = "mtrsvn";
+            body.style.backgroundImage = "linear-gradient(135deg, #AB75D8 0%, #b78cdb 100%)";
+            pText.innerHTML = pText.innerHTML.replace(/matersven/g, "mtrsvn");
+        } else {
+            image.src = 'img/image.png';
+            h2Text.innerHTML = "Hello! 👋,<br>I'm matersven";
+            logoText.innerHTML = "matersven";
+            body.style.backgroundImage = "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)";
+            pText.innerHTML = pText.innerHTML.replace(/mtrsvn/g, "matersven");
+        }
+        
+        setTimeout(() => image.classList.remove('click-animation'), 500);
     });
 }
 
-function reloadSlider() {
-    slider.style.left = -items[active].offsetLeft + 'px';
-    scrollToPortfolio();
-    let lastActiveDot = document.querySelector('.slider .dots li.active');
-    if (lastActiveDot) {
-        lastActiveDot.classList.remove('active');
+if (next) {
+    next.addEventListener('click', () => {
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+    });
+}
+
+if (prev) {
+    prev.addEventListener('click', () => {
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+    });
+}
+
+function scrollToPortfolio() {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+        window.scrollTo({ top: portfolioSection.offsetTop, behavior: 'smooth' });
     }
-    dots[active].classList.add('active');
+}
+
+function reloadSlider() {
+    if (!slider || !items[active]) return;
+    slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
+    
+    scrollToPortfolio();
+    
+    document.querySelector('.slider .dots li.active')?.classList.remove('active');
+    dots[active]?.classList.add('active');
 }
 
 dots.forEach((li, key) => {
@@ -105,13 +113,13 @@ dots.forEach((li, key) => {
 
 function hideCaption() {
     const caption = document.querySelector('.floating-caption');
-    caption.classList.add('hide-animation');
-    setTimeout(() => {
-        caption.style.display = 'none';
-    }, 500); 
+    if (caption) {
+        caption.classList.add('hide-animation');
+        setTimeout(() => caption.style.display = 'none', 500);
+    }
 }
 
-window.onresize = function() {
+window.addEventListener('resize', () => {
     reloadSlider();
     reloadSlider2();
-};
+});
