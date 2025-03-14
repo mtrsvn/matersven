@@ -101,6 +101,14 @@ dots.forEach((li, key) => {
     });
 });
 
+function hideCaption() {
+    const caption = document.querySelector('.floating-caption');
+    caption.classList.add('hide-animation');
+    setTimeout(() => {
+        caption.style.display = 'none';
+    }, 500); 
+}
+
 window.onresize = function() {
     reloadSlider();
     reloadSlider2();
