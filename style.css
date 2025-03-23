@@ -34,7 +34,7 @@ body {
 .glass-container {
     display: block;
     max-width: 54vw;
-    margin: 7.5vh auto 22.5px auto; /* Centers horizontally */
+    margin: 7.5vh auto 22.5px auto;
     background-color: rgba(0, 0, 0, 0.56);
     padding: 37.5px;
     border-radius: 12px;
@@ -63,8 +63,6 @@ li.nav-link {
     font-weight: 600;
     margin-top: -7.5px;
 }
-
-
 
 .content {
     display: flex;
@@ -345,6 +343,17 @@ li.nav-link {
     }
 }
 
+@media screen and (max-width: 720px) {
+    .glass-container h2 {
+        font-size: 15px;
+    }
+    
+    .glass-container p {
+        font-size: 11.25px;
+    }
+}
+
+
 .tools-container {
     display: flex;
     flex-wrap: wrap;
@@ -484,38 +493,43 @@ li.nav-link {
 }
 
 @media screen and (max-width: 720px) {
-        .tool {
-            width: 50%; /* Adjust width for smaller screens */
-        }
-        
-        .tool img {
-            max-width: 80px; /* Reduce image size */
-        }
+     .tools-heading {
+        font-size: 18px;
+        margin: 5px 0 !important;
+        padding: 0 !important;
+        line-height: 1.2;
+    }
+    .tool {
+        display: inline-block;
+        width: auto;
+    }
+
+    .tool img {
+        max-width: 40px;
+        display: inline-block;
+    }
+
+    .tool-container {
+        text-align: center;
+        white-space: nowrap;
+    }
         .tool-info {
-            width: 200px; /* Reduce width */
-            padding: 15px; /* Decrease padding */
-            font-size: 14px; /* Adjust font size */
-          }
-        .tool-info h3 {
-            font-size: 8px; /* Make headings smaller */
+        display: none;
         }
-        
-        .tool-info p {
-            font-size: 7px; /* Reduce paragraph text size */
-        }
+
     .floating-caption {
-                font-size: 8px; /* Super small text */
-                padding: 3px; /* Reduce padding */
-                width: 230px; /* Shrink container */
+                font-size: 8px;
+                padding: 3px;
+                width: 230px;
         }
         
             .floating-caption i {
-                font-size: 5px; /* Make the close icon smaller */
+                font-size: 5px;
             }
         
             .floating-caption button {
-                font-size: 8px; /* Smaller button text */
+                font-size: 8px;
                 padding: 8px 24px;
                 min-width: 25px; 
             }
-    }
+}
