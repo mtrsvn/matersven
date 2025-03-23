@@ -14,6 +14,7 @@ body {
     min-height: 100vh;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+    overflow-x: hidden;
 }
 
 @keyframes fadeIn {
@@ -33,8 +34,7 @@ body {
 .glass-container {
     display: block;
     max-width: 54vw;
-    margin-top: 7.5vh;
-    margin-bottom: 22.5px;
+    margin: 7.5vh auto 22.5px auto; /* Centers horizontally */
     background-color: rgba(0, 0, 0, 0.56);
     padding: 37.5px;
     border-radius: 12px;
@@ -63,6 +63,8 @@ li.nav-link {
     font-weight: 600;
     margin-top: -7.5px;
 }
+
+
 
 .content {
     display: flex;
@@ -107,8 +109,14 @@ li.nav-link {
 }
 
 @media screen and (max-width: 720px) {
-    .logo {
-        font-size: 16.5px;
+    .main {
+        margin-top: 0;
+    }
+    .image-wrapper img {
+        max-width: 200px !important;
+    }
+    ul.nav-link {
+        display: none;
     }
     li.nav-link {
         font-size: 9.75px;
@@ -474,3 +482,40 @@ li.nav-link {
 .hide-animation {
     animation: jumpToBottom 0.5s forwards;
 }
+
+@media screen and (max-width: 720px) {
+        .tool {
+            width: 50%; /* Adjust width for smaller screens */
+        }
+        
+        .tool img {
+            max-width: 80px; /* Reduce image size */
+        }
+        .tool-info {
+            width: 200px; /* Reduce width */
+            padding: 15px; /* Decrease padding */
+            font-size: 14px; /* Adjust font size */
+          }
+        .tool-info h3 {
+            font-size: 8px; /* Make headings smaller */
+        }
+        
+        .tool-info p {
+            font-size: 7px; /* Reduce paragraph text size */
+        }
+    .floating-caption {
+                font-size: 8px; /* Super small text */
+                padding: 3px; /* Reduce padding */
+                width: 230px; /* Shrink container */
+        }
+        
+            .floating-caption i {
+                font-size: 5px; /* Make the close icon smaller */
+            }
+        
+            .floating-caption button {
+                font-size: 8px; /* Smaller button text */
+                padding: 8px 24px;
+                min-width: 25px; 
+            }
+    }
