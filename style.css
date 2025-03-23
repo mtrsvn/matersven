@@ -258,13 +258,6 @@ li.nav-link {
     width: 22.5px;
 }
 
-@media screen and (max-width: 768px) {
-    .slider {
-        height: 480px;
-        width: auto;
-    }
-}
-
 .slider2 {
     width: 975px;
     max-width: 100vw;
@@ -344,8 +337,46 @@ li.nav-link {
 }
 
 @media screen and (max-width: 768px) {
-    .slider2 {
-        height: 300px;
+    .slider, .slider2 {
+        width: 1280px; /* Makes image scale properly */
+        height: auto; /* Maintains correct aspect ratio */
+        aspect-ratio: 16 / 9; /* Ensures it stays in 1280x720 proportion */
+        display: flex;
+    }
+    .slider .dots li {
+        list-style: none;
+        width: 3.5px;
+        height: 3.5px;
+        background-color: #fff;
+        margin: 2.5px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .slider .buttons button {
+        font-size: 4.5px;
+        width: 15.5px;
+        height: 15.5px;
+    }
+    .slider2 .buttons button {
+        font-size: 4.5px;
+        width: 15.5px;
+        height: 15.5px;
+    }
+    .slider .dots li.active {
+        width: 12px; 
+    }
+    .slider2 .dots2 li {
+        list-style: none;
+        width: 3.5px;
+        height: 3.5px;
+        background-color: #fff;
+        margin: 2.5px;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+    .slider2 .dots2 li.active {
+        width: 12px; 
     }
 }
 
