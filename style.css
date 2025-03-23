@@ -115,9 +115,6 @@ li.nav-link {
     .image-wrapper img {
         max-width: 200px !important;
     }
-    .image-wrapper img:hover {
-        transform: scale(0.8);
-    }
     ul.nav-link {
         display: none;
     }
