@@ -100,6 +100,8 @@ li.nav-link {
     max-width: 375px;
 }
 
+
+
 @media screen and (max-width: 1075px) {
     .content {
         flex-direction: column;
@@ -524,7 +526,7 @@ li.nav-link {
         }
         
             .floating-caption i {
-                font-size: 5px;
+                font-size: 7px;
             }
         
             .floating-caption button {
