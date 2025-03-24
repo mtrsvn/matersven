@@ -1118,19 +1118,19 @@ li.nav-link {
         }
 
     .floating-caption {
-                font-size: 8px;
-                padding: 3px;
-                width: 230px;
+                font-size: 12px;
+                padding: 12px;
+                width: 22rem;
+                margin: auto; 
         }
-        
             .floating-caption i {
-                font-size: 7px;
+                font-size: 12px;
+                
             }
-        
             .floating-caption button {
-                font-size: 8px;
-                padding: 8px 24px;
-                min-width: 25px; 
+                font-size: 12px;
+                padding: 12px 36px;
+                min-width: 28px; 
             }
 }
 
