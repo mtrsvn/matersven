@@ -984,7 +984,7 @@ li.nav-link {
 }
 
 .tool:hover {
-    transform: scale(1.05);
+    transform: scale(1);
 }
 
 .tool-info {
@@ -1092,7 +1092,7 @@ li.nav-link {
 
 @media screen and (max-width: 720px) {
      .tools-heading {
-        font-size: 18px;
+        font-size: 25px;
         margin: 5px 0 !important;
         padding: 0 !important;
         line-height: 1.2;
@@ -1101,10 +1101,12 @@ li.nav-link {
         display: inline-block;
         width: auto;
     }
-
     .tool img {
-        max-width: 40px;
+        max-width: 55px;
         display: inline-block;
+    }
+    .tool img:hover {
+        transform: none;
     }
 
     .tool-container {
