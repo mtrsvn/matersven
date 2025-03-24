@@ -98,8 +98,6 @@ function reloadSlider() {
     if (!slider || !items[active]) return;
     slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
     
-    scrollToPortfolio();
-    
     document.querySelector('.slider .dots li.active')?.classList.remove('active');
     dots[active]?.classList.add('active');
 }
