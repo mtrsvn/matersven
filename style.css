@@ -335,50 +335,17 @@ li.nav-link {
 .slider2 .dots2 li.active {
     width: 22.5px;
 }
-
+/*
 @media screen and (max-width: 768px) {
-    .slider, .slider2 {
-        width: 1280px; /* Makes image scale properly */
-        height: auto; /* Maintains correct aspect ratio */
-        aspect-ratio: 16 / 9; /* Ensures it stays in 1280x720 proportion */
-        display: flex;
+    .slider {
+        height: 480px;
+        width: auto;
     }
-    .slider .dots li {
-        list-style: none;
-        width: 3.5px;
-        height: 3.5px;
-        background-color: #fff;
-        margin: 2.5px;
-        border-radius: 10px;
-        transition: 0.5s;
+    .slider2 {
+        height: 480px;
+        width: auto;
     }
-    .slider .buttons button {
-        font-size: 4.5px;
-        width: 15.5px;
-        height: 15.5px;
-    }
-    .slider2 .buttons button {
-        font-size: 4.5px;
-        width: 15.5px;
-        height: 15.5px;
-    }
-    .slider .dots li.active {
-        width: 12px; 
-    }
-    .slider2 .dots2 li {
-        list-style: none;
-        width: 3.5px;
-        height: 3.5px;
-        background-color: #fff;
-        margin: 2.5px;
-        border-radius: 10px;
-        transition: 0.5s;
-    }
-
-    .slider2 .dots2 li.active {
-        width: 12px; 
-    }
-}
+} */
 
 @media screen and (max-width: 720px) {
     .glass-container h2 {
@@ -569,4 +536,70 @@ li.nav-link {
                 padding: 8px 24px;
                 min-width: 25px; 
             }
+}
+
+.slider2 {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list2 {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable scrolling */
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.item2 {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+.item2 img {
+    width: 100%;
+    max-width: 1280px; /* Maintain full resolution */
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible */
+    display: block;
+}
+
+.slider {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Enable scrolling */
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+.item{
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+.item img {
+    width: 100%;
+    max-width: 1280px; /* Maintain full resolution */
+    height: auto;
+    object-fit: contain; /* Ensures the whole image is visible */
+    display: block;
 }
