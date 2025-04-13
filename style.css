@@ -589,14 +589,6 @@ li.nav-link {
     object-fit: contain;
     display: block;
 }
-
-.item img {
-    width: 100%;
-    max-width: 1280px;
-    height: auto;
-    object-fit: contain;
-    display: block;
-}
 }
 .footer {
     font-size: 10px;
