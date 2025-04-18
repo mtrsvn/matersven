@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../../../Downloads/bootstrap-5.3.5-dist/bootstrap-5.3.5-dist/js"
+        },
+        {
+            "path": "../../../Downloads/bootstrap-5.3.5-dist/bootstrap-5.3.5-dist/css"
+        }
+    ]
+}

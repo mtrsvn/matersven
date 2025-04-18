@@ -1,40 +1,3 @@
-let slider2 = document.querySelector('.slider2 .list2');
-let items2 = document.querySelectorAll('.slider2 .list2 .item2');
-let next2 = document.getElementById('next2');
-let prev2 = document.getElementById('prev2');
-let dots2 = document.querySelectorAll('.slider2 .dots2 li');
-let lengthItems2 = items2.length - 1;
-let active2 = 0;
-
-if (next2) {
-    next2.addEventListener('click', () => {
-        active2 = active2 + 1 <= lengthItems2 ? active2 + 1 : 0;
-        reloadSlider2();
-    });
-}
-
-if (prev2) {
-    prev2.addEventListener('click', () => {
-        active2 = active2 - 1 >= 0 ? active2 - 1 : lengthItems2;
-        reloadSlider2();
-    });
-}
-
-function reloadSlider2() {
-    if (!slider2 || !items2[active2]) return;
-    slider2.style.transform = `translateX(-${items2[active2].offsetLeft}px)`;
-    
-    document.querySelector('.slider2 .dots2 li.active')?.classList.remove('active');
-    dots2[active2]?.classList.add('active');
-}
-
-dots2.forEach((li, key) => {
-    li.addEventListener('click', () => {
-        active2 = key;
-        reloadSlider2();
-    });
-});
-
 // Main Slider
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
@@ -54,7 +17,7 @@ if (image) {
     image.addEventListener('click', () => {
         image.classList.add('click-animation');
         let pText = document.querySelector("p");
-        
+
         if (image.src.includes('image.png')) {
             image.src = 'img/alternatemater.png';
             h2Text.innerHTML = "Hello! 👋,<br>I'm mtrsvn";
@@ -68,7 +31,7 @@ if (image) {
             body.style.backgroundImage = "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)";
             pText.innerHTML = pText.innerHTML.replace(/mtrsvn/g, "matersven");
         }
-        
+
         setTimeout(() => image.classList.remove('click-animation'), 500);
     });
 }
@@ -97,7 +60,7 @@ function scrollToPortfolio() {
 function reloadSlider() {
     if (!slider || !items[active]) return;
     slider.style.transform = `translateX(-${items[active].offsetLeft}px)`;
-    
+
     document.querySelector('.slider .dots li.active')?.classList.remove('active');
     dots[active]?.classList.add('active');
 }
@@ -119,5 +82,4 @@ function hideCaption() {
 
 window.addEventListener('resize', () => {
     reloadSlider();
-    reloadSlider2();
 });
