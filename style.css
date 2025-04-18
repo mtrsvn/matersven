@@ -29,8 +29,8 @@ body {
     }
 }
 .carousel-inner img {
-    object-fit: cover; /* Ensures the images scale proportionally */
-    border-radius: 10px; /* Add border radius for rounded corners */
+    object-fit: cover; 
+    border-radius: 10px; 
 }
 
 .container {
@@ -271,20 +271,6 @@ li.nav-link {
     white-space: nowrap;
     text-align: center;
 }
-@keyframes appear{
-    from{
-      opacity: 0;
-      scale: 0;
-    }to{
-      opacity: 1;
-      scale: 1;
-    }
-  }
-  .view{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
 
 @keyframes jumpToBottom {
     0% {
@@ -305,7 +291,7 @@ li.nav-link {
         display: none;
     }
 }
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: 546px) {
     .content {
         flex-direction: column;
     }
