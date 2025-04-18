@@ -114,12 +114,7 @@ li.nav-link {
 }
 
 .image-wrapper img {
-    max-width: 375px;
-    transition: transform 0.1s ease-in-out;
-}
-.image-wrapper img:active {
-    transform: scale(0.85);
-}
+    max-width: 375px;}
 .navbar {
     display: flex;
     justify-content: space-between;
