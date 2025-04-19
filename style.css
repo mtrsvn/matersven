@@ -329,18 +329,18 @@ li.nav-link {
 .hide-animation {
     animation: jumpToBottom 0.5s forwards;
 }
-@media (max-width: 546px) {
+@media (max-width: 768px) {
     .logo {
         display: none;
     }
 }
-@media screen and (max-width: 546px) {
+@media screen and (max-width: 768px) {
     .content {
         flex-direction: column;
     }
 }
 
-@media screen and (max-width: 546px) {
+@media screen and (max-width: 768px) {
     .main {
         margin-top: 0;
     }
