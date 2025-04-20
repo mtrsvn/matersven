@@ -197,7 +197,7 @@ li.nav-link {
     color: #fff!important;}
 
 .tool img {
-    width: 120px;
+    width: 80px;
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -232,6 +232,7 @@ li.nav-link {
 
 .tool h3,
 .tool p {
+    font-size: 10px;
     margin: 0;
     padding: 5px 0;
     display: none;
@@ -243,6 +244,7 @@ li.nav-link {
 }
 
 .footer{
+    margin-top: 2em;
     text-align: center;
     margin-bottom: 2em;
   }
