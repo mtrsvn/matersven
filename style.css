@@ -336,6 +336,32 @@ li.nav-link {
         display: none;
     }
 }
+@media screen and (max-width: 1366px) {
+    .glass-container {
+        max-width: 80vw;
+        padding: 24px;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .main h2 {
+        font-size: 20px;
+    }
+    .main p {
+        font-size: 13px;
+    }
+    .image-wrapper img {
+        max-width: 250px;
+    }
+    .tools-heading {
+        font-size: 1.2em;
+    }
+    .tool-info {
+        width: 180px;
+        padding: 12px;
+    }
+}
 @media screen and (max-width: 768px) {
     .content {
         flex-direction: column;
